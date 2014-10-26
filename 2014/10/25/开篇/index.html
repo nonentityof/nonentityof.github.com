@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>部署GitHub | 平庸之辈</title>
+    <title>开篇 | 平庸之辈</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="平庸之辈">
     
-    <meta name="description" content="将Hexo部署至GitHub">
+    <meta name="description" content="因为喜欢动漫，加之工作需要，2007年考了个日语二级，自从拿到了日语二级证书后，日语的进步都仅限于工作中用到的积累，没有再花时间主动学习日语。
+2013年开始自主创业后，项目都面向国内，日语完全没用上，有些退步，因想重拾，所以有了本分类内容。">
     
     
     
@@ -70,51 +71,24 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/10/23/部署GitHub/" title="部署GitHub" itemprop="url">部署GitHub</a>
+      <a href="/2014/10/25/开篇/" title="开篇" itemprop="url">开篇</a>
   </h1>
   <p class="article-author">By
        
 		<a href="http://nonentityof.github.io/about" title="平庸之辈" target="_blank" itemprop="author">平庸之辈</a>
 		
   <p class="article-time">
-    <time datetime="2014-10-22T16:00:00.000Z" itemprop="datePublished"> 发表于 10月 23 2014</time>
+    <time datetime="2014-10-24T16:00:00.000Z" itemprop="datePublished"> 发表于 10月 25 2014</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		
-		<h3 id="将Hexo部署至GitHub">将Hexo部署至GitHub</h3>
+		<h3 id="因为喜欢动漫，加之工作需要，2007年考了个日语二级，自从拿到了日语二级证书后，日语的进步都仅限于工作中用到的积累，没有再花时间主动学习日语。">因为喜欢动漫，加之工作需要，2007年考了个日语二级，自从拿到了日语二级证书后，日语的进步都仅限于工作中用到的积累，没有再花时间主动学习日语。</h3>
+<h3 id="2013年开始自主创业后，项目都面向国内，日语完全没用上，有些退步，因想重拾，所以有了本分类内容。">2013年开始自主创业后，项目都面向国内，日语完全没用上，有些退步，因想重拾，所以有了本分类内容。</h3>
 <p><a id="more"></a></p>
-<h2 id="本地创建密钥">本地创建密钥</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git config --global user.email <span class="number">6611388</span>@qq.com</div><div class="line">git config --global user.name <span class="string">"nonentityof"</span></div><div class="line">ssh-keygen -t rsa -C <span class="string">"6611388@qq.com"</span></div></pre></td></tr></table></figure>
-
-<p><img src="http://github-page-img.qiniudn.com/2014_10_22_hexo_githubimage001.png" alt="" title="终端输出"><br><img src="http://github-page-img.qiniudn.com/2014_10_22_hexo_githubimage002.png" alt="" title="文件输出"> </p>
-<h2 id="登录GitHub创建仓库">登录GitHub创建仓库</h2>
-<h4 id="★★仓库名称格式：github用户名-github-io_或_github用户名-github-com。">★★仓库名称格式：github用户名.github.io 或 github用户名.github.com。</h4>
-<p><img src="http://github-page-img.qiniudn.com/2014_10_22_hexo_githubimage003.png" alt="" title="终端输出"><br><img src="http://github-page-img.qiniudn.com/2014_10_22_hexo_githubimage004.png" alt="" title="终端输出"> </p>
-<h2 id="导入密钥">导入密钥</h2>
-<h4 id="★★将本地生成的id_rsa-pub文件内容，拷贝至SSH_keys的key中。">★★将本地生成的id_rsa.pub文件内容，拷贝至SSH keys的key中。</h4>
-<p><img src="http://github-page-img.qiniudn.com/2014_10_22_hexo_githubimage005.png" alt="" title="终端输出"><br><img src="http://github-page-img.qiniudn.com/2014_10_22_hexo_githubimage006.png" alt="" title="终端输出"> </p>
-<h2 id="测试与GitHub连接">测试与GitHub连接</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure>
-
-<p><img src="http://github-page-img.qiniudn.com/2014_10_22_hexo_githubimage007.png" alt="" title="终端输出"> </p>
-<h2 id="修改Hexo配置文件">修改Hexo配置文件</h2>
-<h4 id="★★配置deploy项。">★★配置deploy项。</h4>
-<blockquote>
-<p>deploy:</p>
-<blockquote>
-<p> type: github<br> repository: <a href="https://github.com/nonentityof/nonentityof.github.com.git" target="_blank" rel="external">https://github.com/nonentityof/nonentityof.github.com.git</a><br>branch: master</p>
-</blockquote>
-</blockquote>
-<p><img src="http://github-page-img.qiniudn.com/2014_10_22_hexo_githubimage008.png" alt="" title="终端输出"> </p>
-<h2 id="部署至GitHub">部署至GitHub</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure>
-
-<p><img src="http://github-page-img.qiniudn.com/2014_10_22_hexo_githubimage009.png" alt="" title="终端输出"> </p>
-<h2 id="查看GitHub">查看GitHub</h2>
-<p><img src="http://github-page-img.qiniudn.com/2014_10_22_hexo_githubimage010.png" alt="" title="终端输出"> </p>
+<h3 id="自此，尽可能每天听一段ＮＨＫ，希望日语能再有所进步，相信以后会有机会再用到。">自此，尽可能每天听一段ＮＨＫ，希望日语能再有所进步，相信以后会有机会再用到。</h3>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -122,13 +96,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  <a class="article-category-link" href="/categories/NHK単語/">NHK単語</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Hexo/">Hexo</a>
+  <span></span> <a href="/tags/NHK単語/">NHK単語</a>
   </div>
 
 </div>
@@ -136,7 +110,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="http://nonentityof.github.io/2014/10/23/部署GitHub/" data-title="部署GitHub | 平庸之辈" data-tsina="null" class="share clearfix">
+  <div data-url="http://nonentityof.github.io/2014/10/25/开篇/" data-title="开篇 | 平庸之辈" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -146,18 +120,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2014/10/25/开篇/" title="开篇">
+ <a href="/2014/10/25/新型インフル治療薬１万５０００人分誤廃棄/" title="新型インフル治療薬１万５０００人分誤廃棄">
   <strong>上一篇：</strong><br/>
   <span>
-  开篇</span>
+  新型インフル治療薬１万５０００人分誤廃棄</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2014/10/22/安装Hexo/"  title="安装Hexo">
+<a href="/2014/10/23/部署GitHub/"  title="部署GitHub">
  <strong>下一篇：</strong><br/> 
- <span>安装Hexo
+ <span>部署GitHub
 </span>
 </a>
 </div>
@@ -176,7 +150,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#将Hexo部署至GitHub"><span class="toc-number">1.</span> <span class="toc-text">将Hexo部署至GitHub</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地创建密钥"><span class="toc-number"></span> <span class="toc-text">本地创建密钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#登录GitHub创建仓库"><span class="toc-number"></span> <span class="toc-text">登录GitHub创建仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#★★仓库名称格式：github用户名-github-io_或_github用户名-github-com。"><span class="toc-number">0.1.</span> <span class="toc-text">★★仓库名称格式：github用户名.github.io 或 github用户名.github.com。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导入密钥"><span class="toc-number"></span> <span class="toc-text">导入密钥</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#★★将本地生成的id_rsa-pub文件内容，拷贝至SSH_keys的key中。"><span class="toc-number">0.1.</span> <span class="toc-text">★★将本地生成的id_rsa.pub文件内容，拷贝至SSH keys的key中。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试与GitHub连接"><span class="toc-number"></span> <span class="toc-text">测试与GitHub连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改Hexo配置文件"><span class="toc-number"></span> <span class="toc-text">修改Hexo配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#★★配置deploy项。"><span class="toc-number">0.1.</span> <span class="toc-text">★★配置deploy项。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署至GitHub"><span class="toc-number"></span> <span class="toc-text">部署至GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看GitHub"><span class="toc-number"></span> <span class="toc-text">查看GitHub</span></a>
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#因为喜欢动漫，加之工作需要，2007年考了个日语二级，自从拿到了日语二级证书后，日语的进步都仅限于工作中用到的积累，没有再花时间主动学习日语。"><span class="toc-number">1.</span> <span class="toc-text">因为喜欢动漫，加之工作需要，2007年考了个日语二级，自从拿到了日语二级证书后，日语的进步都仅限于工作中用到的积累，没有再花时间主动学习日语。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2013年开始自主创业后，项目都面向国内，日语完全没用上，有些退步，因想重拾，所以有了本分类内容。"><span class="toc-number">2.</span> <span class="toc-text">2013年开始自主创业后，项目都面向国内，日语完全没用上，有些退步，因想重拾，所以有了本分类内容。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自此，尽可能每天听一段ＮＨＫ，希望日语能再有所进步，相信以后会有机会再用到。"><span class="toc-number">3.</span> <span class="toc-text">自此，尽可能每天听一段ＮＨＫ，希望日语能再有所进步，相信以后会有机会再用到。</span></a></li></ol>
  
   </div>
 
